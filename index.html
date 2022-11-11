@@ -20,16 +20,23 @@
       margin:20px;
     }
     </style>
+    <script>
+        $(function FileName(){
+            var url = window.location;
+            var path = url.href.split('/');
+            var file_name = path.pop();
+            $('text_box').text(file_name);
+        });
+    </script>
 </head>
 <body>
   <div>
     <label for="file_upload">ファイルを選択してください
-    <input type="file" id="file" onchange="$('#fake_text_box').val($(this).val())">
-    <input type="text" id="file_upload" value="ファイル選択" onClick="$('#file').click();">
+    <input type="file" id="file" onchange="$FileName">
     </label>
   </div>
   <div>
-    <input type="text" id="fake_text_box" value="" size="35" readonly onClick="$('#file').click();">
+    <input type="text" id="text_box" value="" size="35" readonly>
   </div>
 </body>
 </html>
